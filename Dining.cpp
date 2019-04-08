@@ -58,32 +58,39 @@ void drawChopstick(int x,int y,int t1,int t2){
 	glFlush();
 }
 void drawPlates(){
-	outerCircle(55,0,220);
+	outerCircle(55,0,220); //philopher 1 (top) (clock-wise)
 	glColor3f(1,1,1);//plate1
 	filledCircle(55,0,220);
-	drawFood(0,220);
-	
-	outerCircle(55,220,60);
+	//drawFood(0,220);
+
+	outerCircle(55,220,60); //philospher 2
 	glColor3f(1,1,1);//plate2
 	filledCircle(55,220,60);
-	drawFood(220,60);
+	//drawFood(220,60);
 		
-	outerCircle(55,-220,60);
+	outerCircle(55,-220,60);//philopher 3
 	glColor3f(1,1,1);//plate3
-	filledCircle(55,-220,60);
+	filledCircle(55,-220,60);	
 	drawFood(-220,60);
 	
+	outerCircle(55,-130,-190);//philosopher 4
+	glColor3f(1,1,1);//plate 4
+	filledCircle(55,-130,-190);
+	//drawFood(-130,-190);
 	
-	outerCircle(55,130,-190);
-	glColor3f(1,1,1);//plate4
+	outerCircle(55,130,-190);//philosopher 5
+	glColor3f(1,1,1);//plate 5
 	filledCircle(55,130,-190);
 	drawFood(130,-190);
-	
-	outerCircle(55,-130,-190);
-	glColor3f(1,1,1);//plate5
-	filledCircle(55,-130,-190);
-	drawFood(-130,-190);
-	
+
+	outerCircle(85,0, 0);//centre common plate
+	glColor3f(1,0.9568,0.8980);
+	filledCircle(85, 0, 0);
+	drawFood(0,0);
+	drawFood(35, 34);
+	drawFood(-35, 34);
+	drawFood(35, -34);
+	drawFood(-35, -34);	
 }
 void drawChopsticks(){
 	drawChopstick(0+130,220-80,80,70);
